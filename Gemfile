@@ -70,3 +70,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Use YamlDB to dumping manually inserted data to Yaml [https://github.com/yamldb/yaml_db]
+  gem "yaml_db"
