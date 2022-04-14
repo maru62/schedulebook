@@ -1,6 +1,8 @@
 class DaysController < ApplicationController
   before_action :set_day, only: %i[ show edit update destroy ]
 
+  ## scaffoldによって自動生成されたアクション
+
   # GET /days or /days.json
   def index
     @days = Day.all
@@ -9,7 +11,6 @@ class DaysController < ApplicationController
   # GET /days/1 or /days/1.json
   def show
   end
-  
 
   # GET /days/new
   def new
@@ -18,11 +19,6 @@ class DaysController < ApplicationController
 
   # GET /days/1/edit
   def edit
-  end
-
-  # GET /days/list
-  def list
-    @days = Day.all
   end
 
   # POST /days or /days.json
