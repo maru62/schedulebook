@@ -9,6 +9,7 @@ class DaysController < ApplicationController
   # GET /days/1 or /days/1.json
   def show
   end
+  
 
   # GET /days/new
   def new
@@ -17,6 +18,11 @@ class DaysController < ApplicationController
 
   # GET /days/1/edit
   def edit
+  end
+
+  # GET /days/list
+  def list
+    @days = Day.all
   end
 
   # POST /days or /days.json
@@ -58,6 +64,7 @@ class DaysController < ApplicationController
   end
 
   private
+  
     # Use callbacks to share common setup or constraints between actions.
     def set_day
       @day = Day.find(params[:id])
@@ -67,4 +74,5 @@ class DaysController < ApplicationController
     def day_params
       params.require(:day).permit(:date, :event, :expense, :memo)
     end
+  
 end
