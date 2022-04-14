@@ -11,3 +11,14 @@
 #  event: MyString
 #  expense: 1
 #  memo: MyString
+
+# テストデータの自動生成
+
+<% 1.upto(20) do |num| %>
+<% num = "%02d" % num %>
+day<%= num %>:
+  date: 2022-04-<%= num %>
+  event: todesking
+  expense: <%= 1000 %>
+  memo: thug life
+<% end %>
