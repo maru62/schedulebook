@@ -6,11 +6,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  ## helloworkコントローラーのアクションに対して
+  ## helloworkコントローラーのアクションに対してのルート
   get 'hellowork/index', to: 'hellowork#index'
   get 'hellowork/hellowork'
 
-  ## viewコントローラーのアクションに対して
-  get 'view/show_day'
-
+  ## searchコントローラーのアクションに対してのルート
 end
