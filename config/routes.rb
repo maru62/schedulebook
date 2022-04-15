@@ -10,9 +10,7 @@ Rails.application.routes.draw do
   get 'hellowork/index', to: 'hellowork#index'
   get 'hellowork/hellowork'
 
-=begin
-  ## daysコントローラーのアクションに対して
-  get 'days/hellowork'
-=end
+  ## viewコントローラーのアクションに対して
+  get 'view/show_day'
 
 end
