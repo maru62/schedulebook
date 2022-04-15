@@ -59,6 +59,8 @@ class DaysController < ApplicationController
     end
   end
 
+  ## 以上までがscaffoldによって自動生成されたもの
+
   private
   
     # Use callbacks to share common setup or constraints between actions.
