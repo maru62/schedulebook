@@ -2,23 +2,26 @@
 
 # one:
 #  date: 2022-04-08
-#  event: MyString
-#  expense: 1
-#  memo: MyString
+#  event: todesking
+#  expense: 100
+#  memo: ubo
 
 # two:
-#  date: 2022-04-08
-#  event: MyString
-#  expense: 1
+#  date: 2022-04-09
+#  event: der todesking
+#  expense: 200
 #  memo: MyString
 
 # テストデータの自動生成
-
-<% 1.upto(20) do |num| %>
-<% num = "%02d" % num %>
-day<%= num %>:
-  date: 2022-04-<%= num %>
-  event: todesking
-  expense: <%= 1000 %>
-  memo: thug life
-<% end %>
+## なんかシーケンシャル？な感じのものなんておれには到底扱えなかった
+# <% 1.upto(20) do |num| %>
+# <% num = "%02d" % num %>
+# day<%= num %>:
+#  date: 2022-04-<%= num %>
+#  event: todesking
+#  expense: <%= 1000 %>
+#  memo: thug life
+#<% end %>
+#<
+#=end
+#>

@@ -1,0 +1,12 @@
+<%= form_with model: @day, method: :get, local: true do |form| %>
+
+    <div class="field">
+        <%= form.label :event %>
+        <%= form.search_field :event %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit %>
+    </div>
+
+<% end %>

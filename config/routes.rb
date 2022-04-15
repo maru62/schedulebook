@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get 'hellowork/hellowork'
 
   ## searchコントローラーのアクションに対してのルート
+  get 'search/search'
+  
 end
