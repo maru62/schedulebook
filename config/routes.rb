@@ -1,3 +1,4 @@
+# coding: utf-8
 Rails.application.routes.draw do
   resources :days
 
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get 'hellowork/hellowork'
 
   ## searchコントローラーのアクションに対してのルート
+  get 'search/index'  # 特に何も置いてない
   get 'search/search'
   
 end
