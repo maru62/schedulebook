@@ -2,6 +2,9 @@
   諸々の条件で日に対して絞り込みを行いたい
 </h1>
 
+<%
+=begin
+%>
 <%= form_with model: @day, method: :get, local: true do |form| %>
 
     <div class="field">
@@ -12,5 +15,16 @@
     <div class="actions">
         <%= form.submit %>
     </div>
+
+    <% end %>
+<%
+=end
+%>
+
+<%= form_with url: "/search", method: :get do |form| %>
+
+    <%= form.label :query, "Search for:" %>
+    <%= form.text_field :query %>
+    <%= form.submit "Search" %>
 
 <% end %>
