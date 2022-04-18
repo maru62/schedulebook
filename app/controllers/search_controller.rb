@@ -1,3 +1,4 @@
+# coding: utf-8
 class SearchController < ApplicationController
 
     def index # searchを描画する
@@ -12,7 +13,6 @@ class SearchController < ApplicationController
 
     def find_sad_day
         @day = Day.find_by(events: 'sad')
-        render 'days/show'
     end
 
 end

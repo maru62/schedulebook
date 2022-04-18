@@ -1,3 +1,4 @@
+# coding: utf-8
 class DaysController < ApplicationController
   before_action :set_day, only: %i[ show edit update destroy ]
 
