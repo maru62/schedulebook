@@ -5,6 +5,7 @@ class SearchController < ApplicationController
         render 'search/search'
     end
 
+    # このプレースホルダー要るんか？
     def search 
 
     end
@@ -14,6 +15,7 @@ class SearchController < ApplicationController
         render 'days/show'
     end
 
+    ## 実用的ではない検証用なのであとで消す
     def find_by_ids
         @days = Day.find([1018352613, 1018352614, 1018352615])
         render 'days/list'

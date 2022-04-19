@@ -1,6 +1,6 @@
 <table>
     <tr>
-        <th>日付</th><th>できごと</th><th>出費</th><th>メモ</th>
+        <th>日付</th><th>できごと</th><th>出費</th><th>メモ</th><th>元気</th>
     </tr>
 <% @days.each do |day| %>
     <tr>
@@ -8,6 +8,7 @@
         <td><%= day.event %></td>
         <td><%= day.expense %></td>
         <td><%= day.memo %></td>
+        <td><%= day.health %></td>
     </tr>
 <% end %>
 </table>

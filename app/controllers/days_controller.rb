@@ -74,7 +74,7 @@ class DaysController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def day_params
-      params.require(:day).permit(:date, :event, :expense, :memo)
+      params.require(:day).permit(:date, :event, :expense, :memo, :health)
     end
   
 end

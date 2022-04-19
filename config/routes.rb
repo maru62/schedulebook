@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'hellowork/hellowork'
 
   ## searchコントローラーのアクションに対してのルート
-  get 'search/index' , to: 'search#index' # search/searchを描画する
+  get 'search' , to: 'search#index' # search/searchを描画する
   get 'search/sort'
   get 'search/find_sad_day'
   get 'search/find_by_ids'

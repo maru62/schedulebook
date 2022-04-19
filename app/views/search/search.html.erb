@@ -23,11 +23,15 @@
 
 <%= form_with url: "/search", method: :get do |form| %>
 
-    <%= form.label :query_events, "Search for events (string):" %>
-    <%= form.text_field :query %>
+    <%= form.label :query_event, "Search for events (string):" %>
+    <%= form.text_field :query_event %>
     <%= form.submit "Search" %>
 
 <% end %>
+
+<%
+=begin  とりあえず上のeventでの検索をなんとかしてから考える
+%>
 
 <%= form_with url: "/search", method: :get do |form| %>
 
@@ -44,3 +48,7 @@
     <%= form.submit "Search" %>
 
 <% end %>
+
+<%
+=end
+%>
