@@ -6,13 +6,17 @@ class SearchController < ApplicationController
     end
 
     def search 
-    end
 
-    def show
     end
 
     def find_sad_day
-        @day = Day.find_by(events: 'sad')
+        @day = Day.find_by(event: 'sad')
+        render 'days/show'
+    end
+
+    def find_by_ids
+        @days = Day.find([1018352613, 1018352614, 1018352615])
+        render 'days/list'
     end
 
 end
