@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   ## helloworkコントローラーのアクションに対してのルート
   get 'hellowork/index', to: 'hellowork#index'
   get 'hellowork/hellowork'
+  get 'hellowork/form_with_test'
 
   ## searchコントローラーのアクションに対してのルート
   get 'search' , to: 'search#index' # search/searchを描画する

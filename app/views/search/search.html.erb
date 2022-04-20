@@ -21,9 +21,20 @@
 =end
 %>
 
+<p>ID検索ではあるがIDがぐちゃぐちゃになってしまったのであまり実用的ではない</p>
 <%= form_with url: "/search", method: :get do |form| %>
+<!-- ↑たぶんこれ全然あってない -->  
 
-    <%= form.label :query_event, "Search for events (string):" %>
+    <%= form.label :query_id, "Search for the id (integer):" %>
+    <%= form.text_field :query_id %>
+    <%= form.submit "Search" %>
+    
+<% end %>
+
+<%= form_with url: "/search", method: :get do |form| %>
+<!-- ↑これの意味をちゃんと今日あたりに解読したい -->
+
+    <%= form.label :query_event, "Search for the event (string):" %>
     <%= form.text_field :query_event %>
     <%= form.submit "Search" %>
 
