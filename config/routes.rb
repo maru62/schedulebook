@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'hellowork/form_with_test'  # これ何だっけ
 
   ## messagesコントローラーのアクションに対してのルート
-  get 'messages/new'
+  get 'messages/id'
 
   ## searchコントローラーのアクションに対してのルート
   get 'search' , to: 'search#index' # search/searchを描画する
