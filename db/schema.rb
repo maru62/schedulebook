@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_20_051126) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_21_043829) do
   create_table "days", force: :cascade do |t|
     t.date "date"
     t.string "event"
@@ -21,8 +21,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_20_051126) do
     t.integer "health"
   end
 
-  create_table "helloworks", force: :cascade do |t|
-    t.string "messages"
+  create_table "messages", force: :cascade do |t|
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

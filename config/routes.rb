@@ -1,5 +1,6 @@
 # coding: utf-8
 Rails.application.routes.draw do
+  resources :messages
   resources :days
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -11,7 +12,10 @@ Rails.application.routes.draw do
   ## helloworkコントローラーのアクションに対してのルート
   get 'hellowork/index', to: 'hellowork#index'
   get 'hellowork/hellowork'
-  get 'hellowork/form_with_test'
+  get 'hellowork/form_with_test'  # これ何だっけ
+
+  ## messagesコントローラーのアクションに対してのルート
+  get 'messages/new'
 
   ## searchコントローラーのアクションに対してのルート
   get 'search' , to: 'search#index' # search/searchを描画する
