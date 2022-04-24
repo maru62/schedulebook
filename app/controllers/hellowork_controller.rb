@@ -10,9 +10,4 @@ class HelloworkController < ApplicationController
         @msg = 'todesking'
     end
 
-    ## scaffoldをいったん手動でつくるみたいなことをしないと値の受け渡しがよくわからない
-    def new_message
-        # doodad
-    end
-
 end
