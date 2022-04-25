@@ -1,6 +1,6 @@
 # coding: utf-8
 Rails.application.routes.draw do
-  resources :messages
+  resources :messages, constraints: { id: /[0-9]{1,3}/ }
   resources :days
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -16,11 +16,9 @@ Rails.application.routes.draw do
 
   ## messagesコントローラーのアクションに対してのルート
   get 'messages/id'
+  get 'messages/search'
 
-  ## searchコントローラーのアクションに対してのルート
-  get 'search' , to: 'search#index' # search/searchを描画する
-  get 'search/sort'
-  get 'search/find_sad_day'
-  get 'search/find_by_ids'
+  ## searchコントローラーはポア
+  ### phowa
   
 end
