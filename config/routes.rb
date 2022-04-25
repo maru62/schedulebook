@@ -19,8 +19,11 @@ Rails.application.routes.draw do
   get 'messages/search'
   get 'messages/list'
   
-  ## とりあえずIDを指定して表示させる
+  ## とりあえず固定された要求でIDを指定して表示させる
   get 'messages/find_by_ids'
+
+  ## とりあえず固定された要求で文字列を検索して表示させる
+  get 'messages/find_by_string'
 
   ## searchコントローラーはポア
   ### phowa

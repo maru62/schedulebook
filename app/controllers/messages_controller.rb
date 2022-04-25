@@ -24,6 +24,10 @@ class MessagesController < ApplicationController
     @messages = Message.all
   end
 
+  # とりあえず指定したIDで引くやつを作りたい
+  def query_by_id
+    
+
   # POST /messages or /messages.json
   def create
     @message = Message.new(message_params)
@@ -62,10 +66,21 @@ class MessagesController < ApplicationController
     end
   end
 
-  def by_id
+  ## 単純な検索の復習
+
+  def find_by_ids
     @messages = Message.find([2, 4, 6, 8, 10, 12, 14, 16])
-    render 
+    render 'messages/list'
   end
+
+  def find_by_string
+    @message = Message.find_by(message: '助けて')
+    render 'messages/show'
+  end
+
+  ## もっと複雑なやつを復習した後にどうやってフォームからつなげられるのか考える
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
