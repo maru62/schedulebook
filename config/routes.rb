@@ -17,8 +17,10 @@ Rails.application.routes.draw do
   ## messagesコントローラーのアクションに対してのルート
   get 'messages/id'
   get 'messages/search'
-  post 'messages/search_by_id'
-  get 'messages/search_by_id' #見るだけ用
+  get 'messages/list'
+  
+  ## とりあえずIDを指定して表示させる
+  get 'messages/find_by_ids'
 
   ## searchコントローラーはポア
   ### phowa

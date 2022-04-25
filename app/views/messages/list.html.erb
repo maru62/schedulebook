@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <th>ID</th><th>メッセージ</th>
+  </tr>
+  <% @messages.each do |message| %>
+  <tr style="background-color:<%= cycle('#FFffFF', '#FFff99') %>">
+    <td><%= message.id %></td>
+    <td><%= message.message %></td>
+  </tr>
+  <% end %>
+</table>

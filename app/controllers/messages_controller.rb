@@ -19,6 +19,11 @@ class MessagesController < ApplicationController
   def edit
   end
 
+  # view a list of the whole
+  def list
+    @messages = Message.all
+  end
+
   # POST /messages or /messages.json
   def create
     @message = Message.new(message_params)
@@ -57,8 +62,9 @@ class MessagesController < ApplicationController
     end
   end
 
-  def search_by_id
-    render plain: :id
+  def by_id
+    @messages = Message.find([2, 4, 6, 8, 10, 12, 14, 16])
+    render 
   end
 
   private
