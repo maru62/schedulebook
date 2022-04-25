@@ -1,1 +1,27 @@
-## これはたぶんform_withの説明を探しながらやれば書けると思う
+<!-- うんちぶりぶりぶりぶりｒぶぶｒぶｂる -->
+<!-- 一日考えたけどよくわかんないから封印していいか -->
+<!-- ザ・うんこ -->
+<!-- スーパーうんこ -->
+<
+=begin
+>
+
+<h1>Search or Filter messages</h1>
+
+<h2>by message-id</h2>
+<%= form_with({ controller: :messages, action: :search_by_id }) do |form| %>
+    
+    <div>
+        <%= form.label :messageid, style: "display: block" %>
+        <%= form.text_field :id %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+
+<% end %>
+
+<
+=end
+>
