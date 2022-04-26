@@ -25,7 +25,8 @@ class MessagesController < ApplicationController
   end
 
   # とりあえず指定したIDで引くやつを作りたい
-  def query_by_id
+  # def query_by_id
+  # end
     
 
   # POST /messages or /messages.json
@@ -67,6 +68,9 @@ class MessagesController < ApplicationController
   end
 
   ## 単純な検索の復習
+  ##### うんぽこ ######
+  #### ポアもやむなし ####
+  # phowa # # phowa # # phowa #
 
   def find_by_ids
     @messages = Message.find([2, 4, 6, 8, 10, 12, 14, 16])
@@ -78,9 +82,23 @@ class MessagesController < ApplicationController
     render 'messages/show'
   end
 
+  def todesking
+    @messages = Message.where(message: 'todesking')
+    render 'messages/list'
+  end
+
+=begin  けっこ疲れた、本読む
+  def todesking_form
+    respond_to 
+=end
+
+  def todesking_result
+    @messages = Message.where('message = ?', params[:message])
+    render 'messages/list'
+  end
+
+
   ## もっと複雑なやつを復習した後にどうやってフォームからつなげられるのか考える
-
-
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -92,4 +110,6 @@ class MessagesController < ApplicationController
     def message_params
       params.require(:message).permit(:message)
     end
+  
+
 end

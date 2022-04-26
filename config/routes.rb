@@ -18,7 +18,14 @@ Rails.application.routes.draw do
   get 'messages/id'
   get 'messages/search'
   get 'messages/list'
+  get 'messages/todesking'
+  get 'messages/todesking_form'
+  # 結局Railbookと同じところで躓いて詰まった、なんかルーティングの説明とかをもっと読まないといけない気がする
+  get 'messages/todesking_form'
+  post 'messages/todesking_form' => 'messages#todesking_result'
   
+  
+=begin 以下はポア  
   ## とりあえず固定された要求でIDを指定して表示させる
   get 'messages/find_by_ids'
 
@@ -27,5 +34,6 @@ Rails.application.routes.draw do
 
   ## searchコントローラーはポア
   ### phowa
+=end  
   
 end
