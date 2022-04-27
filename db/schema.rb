@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_26_025425) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_27_045828) do
   create_table "days", force: :cascade do |t|
     t.date "date"
     t.string "event"
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_26_025425) do
     t.datetime "updated_at", null: false
     t.integer "health"
     t.string "weather"
+    t.index ["date"], name: "index_days_on_date"
   end
 
   create_table "messages", force: :cascade do |t|
