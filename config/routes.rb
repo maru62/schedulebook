@@ -1,5 +1,8 @@
 # coding: utf-8
 Rails.application.routes.draw do
+  resources :hours
+  resources :purchases
+  resources :expenses
   resources :messages, constraints: { id: /[0-9]{1,3}/ }
   resources :days
   
@@ -19,10 +22,9 @@ Rails.application.routes.draw do
   get 'messages/search'
   get 'messages/list'
   get 'messages/todesking'
-  get 'messages/todesking_form'
   # 結局Railbookと同じところで躓いて詰まった、なんかルーティングの説明とかをもっと読まないといけない気がする
   get 'messages/todesking_form'
-  post 'messages/todesking_form' => 'messages#todesking_result'
+  post 'messages/todesking_query'
   
   
 =begin 以下はポア  

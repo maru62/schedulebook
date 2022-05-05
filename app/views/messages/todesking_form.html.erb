@@ -1,5 +1,7 @@
-<%= form_with(controller: :messages, action: :todesking_result) do |form| %>
+<%= form_with(action: :todesking_query) do |form| %>
+  <div class = "field">
     <%= form.label :message, '絞り込み' %>
     <%= form.text_field :message %>
     <%= form.submit '検索' %>
+  </div>
 <% end %>

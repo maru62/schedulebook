@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_27_045828) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_05_091630) do
   create_table "days", force: :cascade do |t|
     t.date "date"
     t.string "event"
@@ -23,8 +23,37 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_27_045828) do
     t.index ["date"], name: "index_days_on_date"
   end
 
+  create_table "expenses", force: :cascade do |t|
+    t.date "date"
+    t.integer "expense"
+    t.integer "purchase"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hours", force: :cascade do |t|
+    t.date "date"
+    t.integer "hour"
+    t.string "action"
+    t.integer "health"
+    t.integer "mood"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "messages", force: :cascade do |t|
     t.string "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.date "date"
+    t.integer "purchase"
+    t.string "shop"
+    t.string "location"
+    t.string "goods"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
