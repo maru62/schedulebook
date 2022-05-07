@@ -68,11 +68,6 @@ class MessagesController < ApplicationController
     end
   end
 
-  ## 単純な検索の復習
-  ##### うんぽこ ######
-  #### ポアもやむなし ####
-  # phowa # # phowa # # phowa #
-
   def find_by_ids
     @messages = Message.find([2, 4, 6, 8, 10, 12, 14, 16])
     render 'messages/list'
@@ -89,13 +84,13 @@ class MessagesController < ApplicationController
   end
 
   def todesking_form
-#    @messages = Message.where('message = ?', params[:message])
-#    redirect_to 'messages/list'
+    respond_to do |format|
+      
   end
 
   def todesking_query
     @messages = Message.where('message = ?', params[:message])
-    redirect_to 'messages/list'
+    render 'messages/list'
   end
 
 
@@ -105,7 +100,7 @@ class MessagesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_message
       @message = Message.find(params[:id])
-    end
+    end 
 
     # Only allow a list of trusted parameters through.
     def message_params
