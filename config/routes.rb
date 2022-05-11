@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'hellowork/form_with_test'  # これ何だっけ
 
   ## messagesコントローラーのアクションに対してのルート
-  get 'messages/id'、、
+  get 'messages/id'
   get 'messages/search'
   get 'messages/list'
   get 'messages/todesking'
